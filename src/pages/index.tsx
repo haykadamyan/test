@@ -9,7 +9,7 @@ import Stepper from '@/components/stepper';
 export default function Home() {
   return (
     <>
-      {/*<Header />*/}
+      <Header />
       <main>
         <FindAddress onSearch={onSearch} />
         <Stepper />
