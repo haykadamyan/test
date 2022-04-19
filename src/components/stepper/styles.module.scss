@@ -1,0 +1,13 @@
+.stepper {
+  background-position-y: -55px;
+
+  @apply w-[960px] flex flex-col justify-center items-center mt-[200px] bg-[url('/steps-bg.png')] bg-no-repeat bg-contain
+}
+
+.stepper-title {
+  @apply text-grey-100 text-[24px] w-[500px] font-medium text-center
+}
+
+.stepper-wrapper {
+  @apply flex w-[920px] justify-between gap-[100px] mt-[52px]
+}

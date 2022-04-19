@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    './src/components/**/*.{ts,tsx,js,jsx}', 
-    './src/pages/**/*.{ts,tsx,js,jsx}'
+    './src/components//*.{ts,tsx,js,jsx}',
+    './src/pages//*.{ts,tsx,js,jsx}'
   ],
   theme: {
     screens: {
@@ -19,11 +19,14 @@ module.exports = {
       colors: {
         primary: '#0BAEB9',
         secondary: '#4E4E4E',
-        'secondary-100': '#95A1A1'
+        grey: {
+          100: '#95A1A1'
+        }
       },
       fontSize: {
         body1: '15px',
         subtitle1: '19px',
+        subtitle2: '17px',
       }
     },
   },
