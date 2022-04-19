@@ -12,9 +12,20 @@ module.exports = {
       'md': {'max': '992px'},
 
       'sm': {'max': '767px'},
-      
+
       'xs': {'max': '575px'},
-    }
+    },
+    extend: {
+      colors: {
+        primary: '#0BAEB9',
+        secondary: '#4E4E4E',
+        'secondary-100': '#95A1A1'
+      },
+      fontSize: {
+        body1: '15px',
+        subtitle1: '19px',
+      }
+    },
   },
   variants: {},
   plugins: [],
