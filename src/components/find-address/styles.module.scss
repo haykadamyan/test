@@ -1,6 +1,77 @@
 .wrapper {
   background-image: linear-gradient(180.42deg, rgba(11, 174, 185, 0) 0.35%, #0BAEB9 113.26%), url('/find-address-cover.png');
 
-  @apply w-full h-screen bg-cover bg-no-repeat py-12 flex flex-col justify-end items-center;
+  @apply w-full h-screen bg-cover bg-no-repeat bg-center;
 
+  .inner-wrapper {
+    @apply relative max-w-[804px] h-full mx-auto flex flex-col justify-center items-center md:max-w-none md:px-[100px] sm:px-8 xs:px-4;
+
+    .heading {
+      @apply text-[44px] font-semibold text-white text-center mb-8;
+    }
+
+    .search-wrapper {
+      @apply relative p-4 bg-white rounded-full w-full mb-8 md:p-3;
+
+      &.filled {
+        @apply rounded-xl px-4 py-6 sm:px-2 sm:py-3;
+      }
+
+      .input {
+        @apply flex items-center;
+
+        label {
+          @apply p-4 min-w-fit rounded-full bg-primary flex justify-center items-center;
+  
+          .icon {
+            @apply h-6 w-6 text-white;
+          }
+        }
+  
+        input {
+          @apply px-4 focus:outline-none focus:border-0 text-[#4E4E4E] text-xl font-normal w-full;
+        }
+  
+        .clear {
+          @apply w-5 h-5 text-[#AAAEC1] cursor-pointer md:hidden sm:block;
+        }
+      }
+
+      .addresses {
+        @apply absolute left-0 right-0 bg-white pt-6 px-[72px] rounded-b-xl z-10 md:px-4;
+
+        div {
+          @apply flex px-4 py-5 hover:bg-[#EAEEEF] text-[17px] text-secondary leading-6 sm:px-2 sm:py-3 xs:py-2 sm:text-[15px];
+
+          span {
+            @apply font-semibold;
+          }
+        }
+      }
+    }
+
+    .partners {
+      @apply grid grid-flow-col mx-auto items-center gap-8 mb-8;
+    }
+
+    .download {
+      @apply hidden sm:flex w-56 h-[54px] mx-auto items-center justify-center rounded-full gap-1 text-[17px] text-white font-medium bg-white/30;
+    }
+
+    .bottom {
+      @apply absolute bottom-12 lg:bottom-24 md:bottom-[3.25rem] sm:hidden;
+
+      .text {
+        @apply max-w-[520px] text-center text-white/80 text-2xl font-semibold my-8;
+  
+        .solid {
+          @apply text-white;
+        }
+      }
+  
+      .small-text {
+        @apply text-xs text-white/80 font-normal text-center;
+      }
+    }
+  }
 }
