@@ -1,13 +1,13 @@
 .wrapper {
   background: url('/property-fraud-cover.png'), #0BAEB9;
 
-  @apply py-[100px] h-screen bg-center bg-no-repeat bg-cover;
+  @apply py-[100px] bg-center bg-no-repeat bg-cover;
 
   .inner-wrapper {
     @apply max-w-[1108px] mx-auto w-full;
 
     h2 {
-      @apply text-[38px] text-white/80 font-semibold relative;
+      @apply text-[38px] text-white/80 font-semibold relative mb-12;
 
       span {
         @apply text-white;
@@ -16,6 +16,70 @@
       &::before {
         content: '';
         @apply absolute w-[111px] rounded-full h-1 bg-[#EAEEEF] left-0 -bottom-5;
+      }
+    }
+
+    > div {
+      @apply flex justify-between items-end mb-[60px];
+
+      > p {
+        @apply w-1/2 text-white text-subtitle1;
+      }
+
+      .carousel-nav {
+        @apply grid gap-6 grid-flow-col mb-2;
+
+        > button {
+          @apply w-[70px] h-[70px] rounded-full bg-white border border-[#EAEEEF] flex justify-center items-center;
+
+          .arrow {
+            @apply w-6 h-6 text-grey-100;
+          }
+        }
+      }
+    }
+
+    .carousel {
+      @apply grid grid-flow-col gap-6 max-w-full items-baseline overflow-auto;
+
+      &::-webkit-scrollbar {
+        @apply hidden;
+      }
+
+      > div {
+        @apply w-[350px] rounded-xl bg-white overflow-hidden h-full;
+
+        .cover {
+          @apply relative;
+
+          > div {
+            @apply absolute inset-0 flex justify-center items-center;
+
+            .play {
+              @apply w-12 h-12 text-primary;
+            }
+          }
+  
+          img {
+            @apply w-full h-56 object-cover;
+          }
+        }
+
+        .text {
+          @apply px-6 pt-8 pb-4;
+
+          h3, span {
+            @apply text-secondary text-subtitle1 font-medium mb-2;
+          }
+
+          span {
+            @apply text-primary;
+          }
+
+          p {
+            @apply text-grey-100 font-normal text-sm;
+          }
+        }
       }
     }
   }
