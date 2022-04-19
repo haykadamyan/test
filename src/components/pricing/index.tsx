@@ -53,8 +53,18 @@ function Pricing() {
   return (
     <div className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
       <div className="xl:max-w-[1108px] mx-auto">
+        <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
+          <div className="text-center">
+            <p className="mt-2 text-4xl font-semibold text-secondary">
+              <span className="text-primary">Title Guardian</span> Pricing
+            </p>
+            <p className="mt-4 max-w-lg mx-auto font-normal text-subtitle1 text-gray-100">
+              There are 3 subscription plans to suit your personal circumstances. Select your required plan and start below.
+            </p>
+          </div>
+        </div>
 
-        <div className="mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <div className="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
