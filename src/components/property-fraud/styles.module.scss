@@ -1,0 +1,22 @@
+.wrapper {
+  background: url('/property-fraud-cover.png'), #0BAEB9;
+
+  @apply py-[100px] h-screen bg-center bg-no-repeat bg-cover;
+
+  .inner-wrapper {
+    @apply max-w-[1108px] mx-auto w-full;
+
+    h2 {
+      @apply text-[38px] text-white/80 font-semibold relative;
+
+      span {
+        @apply text-white;
+      }
+
+      &::before {
+        content: '';
+        @apply absolute w-[111px] rounded-full h-1 bg-[#EAEEEF] left-0 -bottom-5;
+      }
+    }
+  }
+}
