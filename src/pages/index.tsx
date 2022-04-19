@@ -1,12 +1,16 @@
 import FindAddress from "components/find-address";
 import Header from "components/header";
+import Stepper from 'components/stepper';
+
+
 
 export default function Home() {
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <main>
-        <FindAddress />
+        {/*<FindAddress />*/}
+        <Stepper />
       </main>
     </>
   )
