@@ -2,6 +2,7 @@ import FindAddress from "@/components/find-address";
 import Header from "@/components/header";
 import AppDownload from "@/components/app-download";
 import Pricing from "@/components/pricing";
+import RegisterProperty from "@/components/register-property";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </main>
       <AppDownload />
       <Pricing />
+      <RegisterProperty />
       <Footer />
     </>
   )
