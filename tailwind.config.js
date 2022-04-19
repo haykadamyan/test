@@ -5,15 +5,15 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'xl': {'min': '993px'},
+      'xl': {'min': '1366px'},
 
-      'lg': {'max': '992px', 'min': '769px'},
+      'lg': {'max': '1366px'},
 
-      'md': {'max': '768px', 'min': '577px'},
+      'md': {'max': '992px'},
 
-      'sm': {'max': '576px',  'min': '391px'},
+      'sm': {'max': '767px'},
       
-      'xs': {'max': '390px', 'min': '0px'},
+      'xs': {'max': '575px'},
     }
   },
   variants: {},
