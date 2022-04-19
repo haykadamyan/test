@@ -5,7 +5,7 @@
     @apply xl:max-w-[1108px] mx-auto;
 
     .nav {
-      @apply flex flex-row;
+      @apply flex flex-row border-y border-gray-200 pt-20 pb-20;
 
       .section {
         @apply basis-1/4 md:basis-1/3;
