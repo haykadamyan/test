@@ -1,11 +1,107 @@
 import React, { memo } from 'react';
-import Logo from '@/components/logo';
+import { CheckIcon } from '@heroicons/react/outline';
+
+const pricing = {
+  tiers: [
+    {
+      title: 'Starter',
+      price: 29.99,
+      description: 'Annual Subscription',
+      features: ['24/7 activity monitoring', 'FREE copy of your title deeds', 'Full 24hr support package', 'Unlimited joint Guardians', 'Property valuation tracking', 'Less than £2.50 per month'],
+      cta: 'Purchase',
+      mostPopular: true,
+    },
+    {
+      title: 'Portfolio',
+      price: 19.99,
+      description: 'Covers 5+ Properties',
+      features: [
+        '24/7 activity monitoring',
+        'Protects your Portfolio',
+        'FREE copy of your title deeds',
+        'Full 24hr support package',
+        'Unlimited joint Guardians',
+        'Property valuation tracking',
+      ],
+      cta: 'Contact Us',
+      mostPopular: false,
+    },
+    {
+      title: 'Lifetime',
+      price: 199.99,
+      description: 'Homeowner life term Plan',
+      features: [
+        'FREE copy of your title deeds',
+        'FREE copy of your title deeds',
+        'Full 24hr support package',
+        'Unlimited joint Guardians',
+        'Transfers when you move home',
+        'Property valuation tracking',
+      ],
+      cta: 'Contact Us',
+      mostPopular: false,
+    },
+  ],
+}
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 
 function Pricing() {
   return (
     <div className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
       <div className="xl:max-w-[1108px] mx-auto">
-        procing
+
+        <div className="mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+          {pricing.tiers.map((tier) => (
+            <div
+              key={tier.title}
+              className="relative bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col"
+            >
+              <div className="flex-1">
+                {tier.mostPopular && (
+                  <p className="absolute top-0 right-6 py-1.5 px-4 bg-primary rounded-full text-xs font-semibold uppercase tracking-wide text-white transform -translate-y-1/2">
+                    popular
+                  </p>
+                )}
+
+                <div className="bg-blue-50 p-8 rounded-t-2xl text-center">
+                  <h3 className="text-price text-primary font-medium">
+                    ${tier.price}
+                  </h3>
+                  <p className="text-secondary text-price-label mt-2">
+                    {tier.title} Plan
+                  </p>
+                  <p className="mt-2 text-gray-50 text-body2">{tier.description}</p>
+                </div>
+
+                <ul role="list" className="px-6 my-8 space-y-4">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex">
+                      <CheckIcon className="flex-shrink-0 w-6 h-6 text-primary" aria-hidden="true" />
+                      <span className="ml-3 text-gray-500">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="px-6 pb-8">
+                  <a
+                   href="#"
+                   className={classNames(
+                     tier.mostPopular
+                       ? 'bg-primary text-white'
+                       : 'border-2 border-primary text-secondary',
+                     'block w-full py-3 px-6 border rounded-md text-center font-medium'
+                   )}
+                  >
+                    {tier.cta}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

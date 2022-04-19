@@ -141,7 +141,7 @@ function Footer() {
               <ul role="list" className="mt-4 space-y-4">
                 {section.items.map((item) => (
                   <li key={item.label}>
-                    <a href={item.href} className="text-body1 text-secondary-100 font-medium leading-7">
+                    <a href={item.href} className="text-body1 text-gray-100 font-medium leading-7">
                       {item.label}
                     </a>
                   </li>
