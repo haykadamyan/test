@@ -11,14 +11,18 @@
     }
 
     .search-wrapper {
-      @apply flex p-3 bg-white rounded-full;
+      @apply flex p-4 bg-white rounded-full w-full;
 
       label {
-        @apply h-14 w-14 rounded-full bg-[#0BAEB9] flex justify-center items-center;
+        @apply p-4 min-w-fit rounded-full bg-primary flex justify-center items-center;
 
         .icon {
-          @apply h-5 w-5 text-white;
+          @apply h-6 w-6 text-white;
         }
+      }
+
+      input {
+        @apply px-4 focus:outline-none focus:border-0 text-[#4E4E4E] text-xl font-normal w-full;
       }
     }
   }

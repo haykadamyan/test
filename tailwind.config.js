@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    './src/components/**/*.{ts,tsx,js,jsx}', 
-    './src/pages/**/*.{ts,tsx,js,jsx}'
+    './src/components//*.{ts,tsx,js,jsx}',
+    './src/pages//*.{ts,tsx,js,jsx}'
   ],
   theme: {
     screens: {
@@ -12,8 +12,13 @@ module.exports = {
       'md': {'max': '992px'},
 
       'sm': {'max': '767px'},
-      
+
       'xs': {'max': '575px'},
+    },
+    extend: {
+      colors: {
+        primary: '#0BAEB9',
+      },
     }
   },
   variants: {},
