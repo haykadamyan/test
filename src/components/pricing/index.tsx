@@ -53,7 +53,7 @@ function Pricing() {
   return (
     <div className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
       <div className="xl:max-w-[1108px] mx-auto">
-        <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="pt-32 px-4 sm:px-6 lg:px-8 lg:pt-20">
           <div className="text-center">
             <p className="mt-2 text-4xl font-semibold text-secondary">
               <span className="text-primary">Title Guardian</span> Pricing
