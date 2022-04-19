@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import Logo from '@/components/logo';
 import styles from './styles.module.scss';
 
 type FooterProps = {};
@@ -133,7 +134,7 @@ function Footer(props: FooterProps) {
   return (
     <footer className={styles.wrapper}>
       <div className={styles['inner-wrapper']}>
-        <img src="/logo.svg" alt="logo" />
+        <Logo />
         <div className={styles.nav}>
           {navigation.menu.map(section => (
             <div className={styles['section']}>
@@ -154,7 +155,7 @@ function Footer(props: FooterProps) {
         </div>
         <div className="mt-6 mb-10 flex items-center justify-between">
           <p className="text-base text-gray-400">
-            &copy; 2020 Workflow, Inc. All rights reserved.
+            &copy; 2022 First Guardian Ltd. All rights reserved
           </p>
           <div className="flex space-x-6">
             {navigation.social.map((item) => (
