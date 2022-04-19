@@ -1,10 +1,12 @@
 import React, { memo } from 'react';
 
-type LogoProps = {};
+type LogoProps = {
+  dark?: boolean
+};
 
-function Logo(props: LogoProps) {
+function Logo({ dark }: LogoProps) {
   return (
-    <img src="/logo.svg" alt="logo" />
+    <img src={dark ? '/logo-dark.png' : '/logo.svg'} alt="logo" />
   );
 }
 

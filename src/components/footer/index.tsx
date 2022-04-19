@@ -75,16 +75,6 @@ const navigation = {
     },
     {
       label: 'Mobile',
-      items: [
-        {
-          id: 1,
-          label: 'Android',
-        },
-        {
-          id: 2,
-          label: 'IOS',
-        },
-      ]
     }
   ],
   social: [
@@ -131,21 +121,39 @@ function Footer() {
   return (
     <footer className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
       <div className="xl:max-w-[1108px] mx-auto">
-        <Logo />
-        <div className="flex flex-row border-y border-gray-200 pt-16 pb-16">
+        <div className="mt-24">
+          <Logo dark />
+        </div>
+        <div className="mt-10 flex flex-row border-y border-gray-200 pt-16 pb-16">
           {navigation.menu.map(section => (
             <div className="basis-1/4 md:basis-1/3">
               <h3 className="text-subtitle1 font-medium leading-7 tracking-tight text-secondary">
                 {section.label}
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {section.items.map((item) => (
+                {section.items && section.items.map((item) => (
                   <li key={item.label}>
                     <a href={item.href} className="text-body1 text-gray-100 font-medium leading-7">
                       {item.label}
                     </a>
                   </li>
                 ))}
+                {!section.items && (
+                  <>
+                    <li>
+                      <img
+                        src="/app-store.png"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="/googleplay.png"
+                        alt=""
+                      />
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           ))}
