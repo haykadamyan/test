@@ -1,3 +1,39 @@
 .wrapper {
-  @apply w-full px-32 py-4 absolute;
+  @apply w-full absolute lg:px-8 md:px-10 sm:px-6 xs:px-4;
+
+  .inner-wrapper {
+    @apply xl:max-w-[1108px] h-[66px] mx-auto flex justify-between items-center;
+
+    .nav {
+      @apply grid grid-flow-col gap-6 h-full justify-items-center md:hidden;
+  
+      .nav-item {
+        @apply h-full flex items-center text-center text-white text-[15px];
+
+        &.active {
+          @apply border-b-2;
+        }
+      }
+    }
+  
+    .header-end {
+      @apply grid grid-flow-col gap-3 items-center md:gap-4;
+
+      .button {
+        @apply px-3 py-2 rounded-full text-[15px] font-medium sm:hidden;
+  
+        &.sign-in {
+          @apply text-white text-opacity-80;
+        }
+  
+        &.register {
+          @apply bg-white text-[#4E4E4E];
+        }
+      }
+
+      .menu-icon {
+        @apply hidden h-6 px-4 border-l-2 md:block sm:border-none;
+      }
+    }
+  }
 }
