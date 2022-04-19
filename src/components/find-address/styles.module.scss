@@ -1,6 +1,26 @@
 .wrapper {
   background-image: linear-gradient(180.42deg, rgba(11, 174, 185, 0) 0.35%, #0BAEB9 113.26%), url('/find-address-cover.png');
 
-  @apply w-full h-screen bg-cover bg-no-repeat py-12 flex flex-col justify-end items-center;
+  @apply w-full h-screen bg-cover bg-no-repeat py-12;
+
+  .inner-wrapper {
+    @apply max-w-[804px] h-full mx-auto flex flex-col justify-end items-center;
+
+    .heading {
+      @apply text-[44px] font-semibold text-white text-center mb-8;
+    }
+
+    .search-wrapper {
+      @apply flex p-3 bg-white rounded-full;
+
+      label {
+        @apply h-14 w-14 rounded-full bg-[#0BAEB9] flex justify-center items-center;
+
+        .icon {
+          @apply h-5 w-5 text-white;
+        }
+      }
+    }
+  }
 
 }
