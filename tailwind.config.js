@@ -18,8 +18,17 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0BAEB9',
+        secondary: '#4E4E4E',
+        grey: {
+          100: '#95A1A1'
+        }
       },
-    }
+      fontSize: {
+        body1: '15px',
+        subtitle1: '19px',
+        subtitle2: '17px',
+      }
+    },
   },
   variants: {},
   plugins: [],

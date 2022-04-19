@@ -1,0 +1,23 @@
+.wrapper {
+  @apply w-full lg:px-8 md:px-10 sm:px-6 xs:px-4;
+
+  .inner-wrapper {
+    @apply xl:max-w-[1108px] mx-auto;
+
+    .nav {
+      @apply flex flex-row;
+
+      .section {
+        @apply basis-1/4 md:basis-1/3;
+
+        .section-title {
+          @apply text-subtitle1 font-medium leading-7 tracking-tight text-secondary;
+        }
+
+        .nav-item {
+          @apply text-body1 text-grey-100 font-medium leading-7
+        }
+      }
+    }
+  }
+}

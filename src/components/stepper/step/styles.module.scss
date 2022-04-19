@@ -1,3 +1,23 @@
+.step {
+  @apply w-[255px] flex flex-col justify-center items-center
+}
+
+.lifted {
+  @apply relative top-[-100px]
+}
+
 .step-icon {
-  @apply w-[100px] h-[100px] bg-primary border-[11px] border-[#85D7DC] rounded-full flex justify-center align-middle
+  @apply w-[100px] h-[100px] bg-primary border-[11px] border-[#85D7DC] rounded-full flex justify-center items-center mb-[25px]
+}
+
+.step-title {
+  @apply text-secondary text-subtitle1 font-semibold leading-[150%] mb-[10px]
+}
+
+.step-description {
+  @apply text-grey-100 text-subtitle2 font-normal text-center leading-[150%]
+}
+
+.step-number {
+  @apply text-[#EAEEEF] text-[45px] mt-[16px]
 }
