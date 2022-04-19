@@ -68,7 +68,7 @@ function Pricing() {
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
-              className="relative bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col"
+              className="relative bg-white border border-blue-50 rounded-2xl shadow-sm flex flex-col"
             >
               <div className="flex-1">
                 {tier.mostPopular && (
@@ -91,7 +91,7 @@ function Pricing() {
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex">
                       <CheckIcon className="flex-shrink-0 w-6 h-6 text-primary" aria-hidden="true" />
-                      <span className="ml-3 text-gray-500">{feature}</span>
+                      <span className="ml-3 text-gray-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
