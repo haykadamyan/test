@@ -1,8 +1,5 @@
 import React, { memo } from 'react';
 import Logo from '@/components/logo';
-import styles from './styles.module.scss';
-
-type FooterProps = {};
 
 const navigation = {
   menu: [
@@ -130,21 +127,21 @@ const navigation = {
 }
 
 
-function Footer(props: FooterProps) {
+function Footer() {
   return (
-    <footer className={styles.wrapper}>
-      <div className={styles['inner-wrapper']}>
+    <footer className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
+      <div className="xl:max-w-[1108px] mx-auto">
         <Logo />
-        <div className={styles.nav}>
+        <div className="flex flex-row border-y border-gray-200 pt-16 pb-16">
           {navigation.menu.map(section => (
-            <div className={styles['section']}>
-              <h3 className={styles['section-title']}>
+            <div className="basis-1/4 md:basis-1/3">
+              <h3 className="text-subtitle1 font-medium leading-7 tracking-tight text-secondary">
                 {section.label}
               </h3>
               <ul role="list" className="mt-4 space-y-4">
                 {section.items.map((item) => (
                   <li key={item.label}>
-                    <a href={item.href} className={styles['nav-item']}>
+                    <a href={item.href} className="text-body1 text-secondary-100 font-medium leading-7">
                       {item.label}
                     </a>
                   </li>
