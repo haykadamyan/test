@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useRef } from 'react';
 import { ArrowLeftIcon, ArrowRightIcon, PlayIcon } from '@heroicons/react/solid'
 
 import styles from './styles.module.scss';
@@ -42,6 +42,12 @@ const carouselData = [
 ];
 
 const PropertyFraud: FunctionComponent = () => {
+  const carouselRef = useRef(null);
+
+  const handleSlideButton = (dir: string) => {
+    dir === 'right' ? carouselRef.current.scrollLeft += 374 : carouselRef.current.scrollLeft -= 374;
+  }
+
   return (
     <section className={styles.wrapper}>
       <div className={styles['inner-wrapper']}>
@@ -52,15 +58,18 @@ const PropertyFraud: FunctionComponent = () => {
             affects everyone. Here are just a few examples.
           </p>
           <div className={styles['carousel-nav']}>
-            <button>
+            <button onClick={() => handleSlideButton('left')}>
               <ArrowLeftIcon className={styles.arrow} />
             </button>
-            <button>
+            <button onClick={() => handleSlideButton('right')}>
               <ArrowRightIcon className={styles.arrow} />
             </button>
           </div>
         </div>
-        <div className={styles.carousel}>
+      </div>
+      
+      <div className={styles.carousel} ref={carouselRef}>
+        <div className={styles['carousel-inner']}>
           {carouselData.map(item => (
             <div key={item.id}>
               <div className={styles.cover}>
@@ -82,6 +91,7 @@ const PropertyFraud: FunctionComponent = () => {
           ))}
         </div>
       </div>
+
     </section>
   )
 }
