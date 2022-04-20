@@ -27,7 +27,7 @@ const FindAddress: FunctionComponent<FindAddressProps> = ({ onSearch }) => {
 
 
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="home">
       <div className={styles['inner-wrapper']}>
         <h2 className={styles.heading}>
           Enter your address to find out if
