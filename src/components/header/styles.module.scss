@@ -1,5 +1,5 @@
 .wrapper {
-  @apply w-full absolute lg:px-8 md:px-10 sm:px-6 xs:px-4 z-50;
+  @apply w-full absolute lg:px-8 md:px-10 sm:px-6 xs:px-4 z-10;
 
   .inner-wrapper {
     @apply xl:max-w-[1108px] h-[66px] mx-auto flex justify-between items-center;
