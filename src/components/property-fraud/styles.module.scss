@@ -1,21 +1,92 @@
 .wrapper {
   background: url('/property-fraud-cover.png'), #0BAEB9;
 
-  @apply py-[100px] h-screen bg-center bg-no-repeat bg-cover;
+  @apply py-[100px] bg-center bg-no-repeat bg-cover;
 
   .inner-wrapper {
-    @apply max-w-[1108px] mx-auto w-full;
+    @apply max-w-[1108px] mx-auto w-full lg:max-w-none lg:px-8;
 
     h2 {
-      @apply text-[38px] text-white/80 font-semibold relative;
+      @apply text-[38px] text-white/80 font-semibold relative mb-5 lg:text-[34px] sm:text-[26px] sm:text-center;
 
       span {
         @apply text-white;
       }
+    }
 
-      &::before {
-        content: '';
-        @apply absolute w-[111px] rounded-full h-1 bg-[#EAEEEF] left-0 -bottom-5;
+    .line {
+      @apply w-[111px] rounded-full h-1 mb-6 bg-[#EAEEEF] sm:left-[unset] sm:mx-auto;
+    }
+
+    > div {
+      @apply flex justify-between items-end mb-[60px];
+
+      > p {
+        @apply w-1/2 text-white text-subtitle1 lg:text-body2 sm:w-full sm:text-center;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    @apply relative max-w-full;
+
+    .carousel {
+      @apply max-w-full overflow-auto scroll-smooth;
+  
+      &::-webkit-scrollbar {
+        @apply hidden;
+      }
+  
+      .carousel-inner {
+        @apply grid grid-flow-col gap-6 items-baseline w-fit px-[calc((100%-1108px)/2)] lg:px-8;
+  
+        > div {
+          @apply w-[350px] rounded-xl bg-white overflow-hidden h-full xs:w-[330px];
+  
+          .cover {
+            @apply relative;
+  
+            > button {
+              @apply absolute inset-0 flex justify-center items-center;
+  
+              .play {
+                @apply w-12 h-12;
+              }
+            }
+    
+            img {
+              @apply w-full h-56 object-cover;
+            }
+          }
+  
+          .text {
+            @apply px-6 pt-8 pb-4;
+  
+            h3, span {
+              @apply text-secondary text-subtitle1 font-medium mb-2;
+            }
+  
+            span {
+              @apply text-primary;
+            }
+  
+            p {
+              @apply text-gray-100 font-normal text-sm;
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-nav {
+      @apply flex gap-6 grid-flow-col absolute -top-36 right-[calc((100%-1108px)/2)] md:mt-[52px] sm:static sm:mt-12 sm:justify-center;
+
+      > button {
+        @apply w-[70px] h-[70px] md:h-16 md:w-16 rounded-full bg-white border border-[#EAEEEF] flex justify-center items-center;
+
+        .arrow {
+          @apply w-6 h-6 text-gray-100;
+        }
       }
     }
   }

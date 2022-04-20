@@ -4,6 +4,7 @@ import AppDownload from "@/components/app-download";
 import Pricing from "@/components/pricing";
 import RegisterProperty from "@/components/register-property";
 import Footer from "@/components/footer";
+import PropertyFraud from "@/components/property-fraud";
 import onSearch from "@/mock/onSearch";
 import Stepper from '@/components/stepper';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <FindAddress onSearch={onSearch} />
         <Stepper />
+        <PropertyFraud />
       </main>
       <AppDownload />
       <Pricing />
