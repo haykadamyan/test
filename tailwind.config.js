@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    './src/components//*.{ts,tsx,js,jsx}',
-    './src/pages//*.{ts,tsx,js,jsx}'
+    './src/components/**/*.{ts,tsx,js,jsx}', 
+    './src/pages/**/*.{ts,tsx,js,jsx}'
   ],
   theme: {
     screens: {
@@ -19,17 +19,28 @@ module.exports = {
       colors: {
         primary: '#0BAEB9',
         secondary: '#4E4E4E',
-        grey: {
-          100: '#95A1A1'
-        }
+        gray: {
+          50: '#7E818F',
+          100: '#95A1A1',
+          200: '#5B5150'
+        },
+        blue: {
+          50: '#EAEEEF'
+        },
+        ['white-opacity']: 'rgba(255, 255, 255, 0.3)'
       },
       fontSize: {
         body1: '15px',
+        body2: '17px',
         subtitle1: '19px',
-        subtitle2: '17px',
+        price: '31px',
+        ['price-label']: '29px',
       }
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+  ],
 }
