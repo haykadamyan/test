@@ -7,7 +7,7 @@
     @apply relative max-w-[804px] h-full mx-auto flex flex-col justify-center items-center md:max-w-none md:px-[100px] sm:px-8 xs:px-4;
 
     .heading {
-      @apply text-[44px] font-semibold text-white text-center mb-8;
+      @apply text-[44px] font-semibold text-white text-center mb-8 lg:text-4xl sm:text-[32px] xs:text-[28px];
     }
 
     .search-wrapper {

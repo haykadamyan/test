@@ -49,7 +49,7 @@ const PropertyFraud: FunctionComponent = () => {
   }
 
   return (
-    <section className={styles.wrapper}>
+    <section id="property-fraud" className={styles.wrapper}>
       <div className={styles['inner-wrapper']}>
         <h2><span>Victims</span> of Property Fraud​</h2>
         <div className={styles.line} />
