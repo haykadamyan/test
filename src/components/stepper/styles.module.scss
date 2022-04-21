@@ -1,8 +1,16 @@
+.title {
+  @apply w-[819px] text-center mx-auto text-[38px] mt-[100px] text-secondary font-semibold lg:text-[34px] md:w-[571px] sm:w-[420px] xs:max-w-full xs:px-4 xs:text-2xl;
+
+  span {
+    @apply text-primary;
+  }
+}
+
 .stepper {
   background-position-y: -55px;
 
-  @apply w-[960px] flex flex-col justify-center items-center mt-[200px] mx-auto bg-[url('/steps-bg.png')] bg-no-repeat bg-contain;
-  @apply md:bg-none md:w-full md:bg-[#F4F8F9] md:mt-0 md:py-16 sm:px-[72px] sm:bg-white xs:px-8;
+  @apply w-[960px] flex flex-col justify-center items-center mt-16 mx-auto bg-[url('/steps-bg.png')] bg-no-repeat bg-contain;
+  @apply md:bg-none md:w-full md:mt-0 md:py-16 sm:px-[72px] xs:px-8;
 }
 
 .stepper-title {
