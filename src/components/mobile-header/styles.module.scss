@@ -1,0 +1,19 @@
+.header {
+  @apply bg-white px-4 py-5 border-b border-b-8 border-[#F2F2F2];
+
+  .innerContent {
+    @apply flex flex-row gap-x-[4.375rem] items-center;
+
+    .backLink {
+      @apply font-medium text-body1 text-secondary flex flex-row gap-x-[0.5rem] items-center;
+
+      .backIcon {
+        @apply stroke-[#AAAEC1] w-[1.1rem] h-[1.875rem];
+      }
+    }
+
+    .registrationLink {
+      @apply text-secondary text-body2 font-medium;
+    }
+  }
+}

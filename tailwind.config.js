@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    './src/components/**/*.{ts,tsx,js,jsx}', 
+    './src/components/**/*.{ts,tsx,js,jsx}',
     './src/pages/**/*.{ts,tsx,js,jsx}'
   ],
   theme: {
@@ -30,8 +30,10 @@ module.exports = {
         ['white-opacity']: 'rgba(255, 255, 255, 0.3)'
       },
       fontSize: {
+        label: '13px',
         body1: '15px',
         body2: '17px',
+        title: '21px',
         subtitle1: '19px',
         price: '31px',
         ['price-label']: '29px',
