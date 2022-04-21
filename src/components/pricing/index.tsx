@@ -1,5 +1,8 @@
 import React, { memo } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { CheckIcon } from '@heroicons/react/outline';
+
+import 'swiper/css';
 
 const pricing = {
   tiers: [
@@ -64,7 +67,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="mt-12 space-y-12 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-x-8">
+        <div className="mt-12 space-y-12 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-x-8 xs:hidden">
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
@@ -111,6 +114,9 @@ function Pricing() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="sm:hidden md:hidden lg:hidden xl:hidden xs:block text-center">
+          hello
         </div>
       </div>
     </div>
