@@ -1,0 +1,11 @@
+.wrapper {
+  @apply px-4 pt-6;
+
+  .title {
+    @apply text-secondary text-title font-medium mb-3;
+  }
+
+  .note {
+    @apply text-[#AAAEC1] text-body1 font-normal;
+  }
+}

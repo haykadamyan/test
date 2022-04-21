@@ -1,0 +1,7 @@
+.label {
+  @apply block text-label font-normal text-[#AAAEC1];
+}
+
+.input {
+  @apply py-2 px-4 w-full text-lg font-normal text-secondary bg-[#F4F8F9] rounded border border-[#EAEEEF];
+}

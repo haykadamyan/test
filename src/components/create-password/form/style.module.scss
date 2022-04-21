@@ -1,0 +1,11 @@
+.form {
+  @apply mt-5;
+
+  .nextButton {
+    @apply w-full bg-primary text-white text-body1 text-center py-3 mt-[6.75rem] rounded;
+  }
+
+  .error {
+    @apply text-[#EB5757];
+  }
+}
