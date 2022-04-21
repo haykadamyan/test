@@ -119,20 +119,20 @@ const navigation = {
 
 function Footer() {
   return (
-    <footer className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
+    <footer className="w-full lg:px-8 md:px-10 sm:px-0">
       <div className="xl:max-w-[1108px] mx-auto">
         <div className="mt-24">
           <Logo dark />
         </div>
-        <div className="mt-10 flex flex-row border-y border-gray-200 pt-16 pb-16">
-          {navigation.menu.map(section => (
-            <div className="basis-1/4 md:basis-1/3">
-              <h3 className="text-subtitle1 font-medium leading-7 tracking-tight text-secondary">
+        <div className="mt-10 grid grid-cols-4 border-y border-gray-100 pt-16 pb-16 sm:grid-cols-2 xs:grid-cols-1 gap-y-12">
+          {navigation.menu.map((section, index) => (
+            <div key={index} className="flex flex-col">
+              <h3 className="text-subtitle1 font-medium leading-7 tracking-tight text-secondary sm:text-center">
                 {section.label}
               </h3>
               <ul role="list" className="mt-4 space-y-4">
                 {section.items && section.items.map((item) => (
-                  <li key={item.label}>
+                  <li key={item.label} className="sm:flex sm:justify-center">
                     <a href={item.href} className="text-body1 text-gray-100 font-medium leading-7">
                       {item.label}
                     </a>
@@ -142,12 +142,14 @@ function Footer() {
                   <>
                     <li>
                       <img
+                        className='sm:mx-auto'
                         src="/app-store.png"
                         alt=""
                       />
                     </li>
                     <li>
                       <img
+                        className='sm:mx-auto'
                         src="/googleplay.png"
                         alt=""
                       />
@@ -158,11 +160,11 @@ function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-6 mb-10 flex items-center justify-between">
+        <div className="mt-6 mb-10 flex items-center justify-between sm:flex-col-reverse">
           <p className="text-base text-gray-400">
             &copy; 2022 First Guardian Ltd. All rights reserved
           </p>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 sm:mb-4">
             {navigation.social.map((item) => (
               <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">{item.name}</span>

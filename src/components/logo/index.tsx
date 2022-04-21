@@ -6,7 +6,7 @@ type LogoProps = {
 
 function Logo({ dark }: LogoProps) {
   return (
-    <img src={dark ? '/logo-dark.png' : '/logo.svg'} alt="logo" />
+    <img src={dark ? '/logo-dark.png' : '/logo.svg'} alt="logo" className='sm:mx-auto' />
   );
 }
 
