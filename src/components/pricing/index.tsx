@@ -64,7 +64,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <div className="mt-12 space-y-12 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-x-8">
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
@@ -100,9 +100,9 @@ function Pricing() {
                    href="#"
                    className={classNames(
                      tier.mostPopular
-                       ? 'bg-primary text-white'
+                       ? 'bg-primary text-white hover:border-2 hover:border-primary hover:text-black hover:bg-white'
                        : 'border-2 border-primary text-secondary',
-                     'block w-full py-3 px-6 border rounded-md text-center font-medium'
+                     'block w-full py-3 px-6 border rounded-md text-center font-medium hover:bg-primary hover:text-white transition'
                    )}
                   >
                     {tier.cta}
