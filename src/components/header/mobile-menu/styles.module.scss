@@ -2,7 +2,7 @@
   @apply hidden md:block fixed inset-0 z-20;
 
   .menu {
-    @apply w-full h-full p-4 bg-white relative grid grid-flow-row gap-6 auto-rows-max	;
+    @apply w-full h-full p-4 bg-white relative grid grid-flow-row gap-6 auto-rows-max;
 
     > button {
       @apply h-6 w-6 ml-auto absolute right-4 top-4;
