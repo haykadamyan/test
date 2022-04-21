@@ -1,0 +1,23 @@
+.phone-stepper {
+    .inner {
+        background-size: 750px;
+        background-position: center top;
+
+        .step-title {
+            @apply text-subtitle1 text-gray-100 text-center font-normal xl:max-w-[350px]
+        }
+
+        .step-number {
+            @apply text-primary text-[45px] text-center
+        }
+
+        @apply xl:w-[1108px] xl:h-[850px] xl:bg-[url('/phone-stepper-lines.png')] bg-no-repeat flex mt-[60px] justify-around
+
+    }
+
+    .line {
+        @apply w-[111px] rounded-full h-1 mb-6 bg-[#EAEEEF] sm:left-[unset] sm:mx-auto;
+    }
+
+    @apply w-full h-[100vh] bg-[#F4F8F9] flex flex-col justify-center items-center
+}

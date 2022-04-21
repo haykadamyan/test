@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import PropertyFraud from "@/components/property-fraud";
 import onSearch from "@/mock/onSearch";
 import Stepper from '@/components/stepper';
+import PhoneStepper from '@/components/phone-stepper';
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Stepper />
         <PropertyFraud />
       </main>
+      <PhoneStepper />
       <AppDownload />
       <Pricing />
       <RegisterProperty />
