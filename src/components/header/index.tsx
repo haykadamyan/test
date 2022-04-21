@@ -15,22 +15,22 @@ const navigation = [
   {
     id:2,
     label: 'Property Fraud',
-    href: '#property',
+    href: '#',
   },
   {
     id: 3,
     label: 'Partners',
-    href: '#partners',
+    href: '#',
   },
   {
     id: 4,
     label: 'FAQ',
-    href: '#faq',
+    href: '#',
   },
   {
     id: 5,
     label: 'Contact',
-    href: '#contact',
+    href: '#',
   },
 ]
 
