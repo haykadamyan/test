@@ -1,13 +1,15 @@
 .stepper {
   background-position-y: -55px;
 
-  @apply w-[960px] flex flex-col justify-center items-center mt-[200px] bg-[url('/steps-bg.png')] bg-no-repeat bg-contain
+  @apply w-[960px] flex flex-col justify-center items-center mt-[200px] mx-auto bg-[url('/steps-bg.png')] bg-no-repeat bg-contain;
+  @apply md:bg-none md:w-full md:bg-[#F4F8F9] md:mt-0 md:py-16 sm:px-[72px] sm:bg-white xs:px-8;
 }
 
 .stepper-title {
-  @apply text-gray-100 text-[24px] w-[500px] font-medium text-center
+  @apply w-[449px] text-gray-100 text-2xl  font-medium text-center mx-auto lg:text-[21px] md:mb-20 sm:text-base sm:w-full;
 }
 
 .stepper-wrapper {
-  @apply flex w-[920px] justify-between gap-[100px] mt-[52px]
+  @apply flex w-[920px] justify-between gap-[100px] mt-[52px];
+  @apply md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-0 md:mt-5 sm:grid-cols-1 sm:gap-y-8;
 }

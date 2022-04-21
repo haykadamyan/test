@@ -79,7 +79,7 @@
     }
 
     .carousel-nav {
-      @apply flex gap-6 grid-flow-col absolute -top-36 right-[calc((100%-1108px)/2)] md:mt-[52px] sm:static sm:mt-12 sm:justify-center;
+      @apply flex gap-6 grid-flow-col absolute -top-36 right-[calc((100%-1108px)/2)] lg:right-8 md:mt-[52px] sm:static sm:mt-12 sm:justify-center;
 
       > button {
         @apply w-[70px] h-[70px] md:h-16 md:w-16 rounded-full bg-white border border-[#EAEEEF] flex justify-center items-center;
