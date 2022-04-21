@@ -4,3 +4,10 @@ export type PasswordValidationCheckProps = {
     regex: string;
     passed: boolean;
 }
+
+export type PasswordScoreItemProps = {
+    label: string;
+    textColor: string;
+    bgColor: string;
+    score: number;
+};

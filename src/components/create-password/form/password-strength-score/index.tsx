@@ -1,6 +1,6 @@
 import React, {FunctionComponent, useEffect, useState} from "react";
 import classNames from "classnames";
-import {PasswordValidationCheckProps} from "@/components/create-password/form/types";
+import {PasswordScoreItemProps, PasswordValidationCheckProps} from "@/components/create-password/form/types";
 
 import styles from "./style.module.scss";
 
@@ -33,6 +33,8 @@ const passwordScores = [
 
 type PasswordStrengthScoreProps = {
     password: string;
+    passwordScore: PasswordScoreItemProps;
+    setPasswordScore: React.Dispatch<React.SetStateAction<PasswordScoreItemProps>>;
     passwordValidationChecks: PasswordValidationCheckProps[];
     setPasswordValidationChecks: React.Dispatch<React.SetStateAction<PasswordValidationCheckProps[]>>;
 }
@@ -40,10 +42,10 @@ type PasswordStrengthScoreProps = {
 const PasswordStrengthScore: FunctionComponent<PasswordStrengthScoreProps> = ({
     password,
     passwordValidationChecks,
-    setPasswordValidationChecks
+    setPasswordValidationChecks,
+    passwordScore,
+    setPasswordScore,
 }) => {
-    const [passwordScore, setPasswordScore] = useState({label: '', textColor: '', bgColor: '', score: 0})
-
     // Pass the changed password through all validation checks
     useEffect(() => {
         let score = 0;

@@ -2,7 +2,7 @@
   @apply mt-5;
 
   .nextButton {
-    @apply w-full bg-primary text-white text-body1 text-center py-3 mt-[6.75rem] rounded;
+    @apply w-full bg-primary text-white text-body1 text-center py-3 mt-[6.75rem] rounded disabled:opacity-60;
   }
 
   .error {
