@@ -1,23 +1,31 @@
 .step {
-  @apply w-[255px] flex flex-col justify-center items-center
+  @apply w-[255px] flex flex-col justify-center items-center md:w-[330px] md:mx-auto sm:max-w-full;
+
+  &.step-numer-3 {
+    @apply md:col-start-2 md:row-start-1 sm:col-start-auto sm:row-start-auto;
+  }
+
+  &.step-numer-2 {
+    @apply md:col-span-2 sm:col-auto md:-mt-8 sm:mt-0;
+  }
 }
 
 .lifted {
-  @apply relative top-[-100px]
+  @apply relative top-[-100px] md:top-0;
 }
 
 .step-icon {
-  @apply w-[100px] h-[100px] bg-primary border-[11px] border-[#85D7DC] rounded-full flex justify-center items-center mb-[25px]
+  @apply w-[100px] h-[100px] bg-primary border-[11px] border-[#85D7DC] rounded-full flex justify-center items-center mb-[25px];
 }
 
 .step-title {
-  @apply text-secondary text-subtitle1 font-semibold leading-[150%] mb-[10px]
+  @apply text-secondary text-subtitle1 font-semibold leading-[150%] mb-[10px];
 }
 
 .step-description {
-  @apply text-gray-100 text-body2 font-normal text-center leading-[150%]
+  @apply text-gray-100 text-body2 font-normal text-center leading-[150%];
 }
 
 .step-number {
-  @apply text-[#EAEEEF] text-[45px] mt-[16px]
+  @apply text-[#EAEEEF] text-[45px] mt-[16px];
 }

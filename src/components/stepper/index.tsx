@@ -8,7 +8,7 @@ function Stepper() {
     return (
         <section className={styles.stepper}>
             <div className={styles['stepper-title']}>
-                3 simple steps that can turn your <br />world upside down
+                3 simple steps that can turn your world upside down
             </div>
             <div className={styles['stepper-wrapper']}>
                 <Step isLifted number={1} icon="/icons/house.svg" title="Target Property" description="Fraudsters search land registry to find a home they want to target"/>

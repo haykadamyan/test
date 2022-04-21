@@ -64,7 +64,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="mt-12 space-y-12 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-x-8">
+        <div className="mt-12 space-y-0 grid grid-cols-3 gap-x-8">
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
