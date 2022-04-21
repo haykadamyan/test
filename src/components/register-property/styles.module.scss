@@ -1,0 +1,13 @@
+.wrapper {
+  @apply w-full lg:px-8 md:px-10 sm:px-6 xs:px-4 mt-20;
+
+  .inner-wrapper {
+    background-image: linear-gradient(177.48deg, rgba(11, 174, 185, 0) 32.27%, #0BAEB9 95.84%), url('/family.jpg');
+
+    @apply max-w-[1108px] h-[589px] mx-auto relative px-8 overflow-hidden lg:px-16 bg-cover bg-center bg-no-repeat flex flex-col justify-end;
+
+    .content {
+      @apply max-w-[726px] mx-auto mt-6 text-white/80 text-center mb-[62px];
+    }
+  }
+}

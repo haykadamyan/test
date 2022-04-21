@@ -27,7 +27,6 @@ module.exports = {
         blue: {
           50: '#EAEEEF'
         },
-        ['white-opacity']: 'rgba(255, 255, 255, 0.3)'
       },
       fontSize: {
         body1: '15px',
