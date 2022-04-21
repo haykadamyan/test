@@ -56,7 +56,7 @@ function classNames(...classes) {
 
 function Pricing() {
   return (
-    <div className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4">
+    <div className="w-full lg:px-8 md:px-10 sm:px-6 xs:px-4 xs:mt-[70px] sm:mt-[-100px]">
       <div className="xl:max-w-[1108px] mx-auto">
         <div className="pt-32 px-4 sm:px-6 lg:px-8 lg:pt-20">
           <div className="text-center">
