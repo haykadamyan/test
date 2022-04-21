@@ -8,6 +8,8 @@ import PropertyFraud from "@/components/property-fraud";
 import onSearch from "@/mock/onSearch";
 import Stepper from '@/components/stepper';
 import PhoneStepper from '@/components/phone-stepper';
+import TitleFraud from "@/components/title-fraud";
+import HowItWorks from "@/components/how-it-works";
 
 
 
@@ -18,8 +20,10 @@ export default function Home() {
       <main>
         <FindAddress onSearch={onSearch} />
         <Stepper />
+        <HowItWorks />
         <PropertyFraud />
       </main>
+      <TitleFraud />
       <PhoneStepper />
       <AppDownload />
       <Pricing />

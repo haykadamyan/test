@@ -15,22 +15,22 @@ const navigation = [
   {
     id:2,
     label: 'Property Fraud',
-    href: '#',
+    href: '#property',
   },
   {
     id: 3,
     label: 'Partners',
-    href: '#',
+    href: '#partners',
   },
   {
     id: 4,
     label: 'FAQ',
-    href: '#',
+    href: '#faq',
   },
   {
     id: 5,
     label: 'Contact',
-    href: '#',
+    href: '#contact',
   },
 ]
 
@@ -38,7 +38,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
   const [isSticky, setIsSticky] = useState<boolean>(false)
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const { pathname } = useRouter();
+  const { pathname, basePath } = useRouter();
 
   const handleScroll = () => {
     if (window.scrollY > 66) {
@@ -55,6 +55,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
 
   return (
     <>

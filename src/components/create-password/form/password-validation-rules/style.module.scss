@@ -1,0 +1,23 @@
+.wrapper {
+  @apply mt-6;
+
+  .note {
+    @apply text-secondary text-label font-medium mb-2 block;
+  }
+
+  .rulesList {
+    @apply flex flex-col gap-y-1;
+
+    .rule {
+      @apply flex flex-row gap-x-[0.625rem] items-center;
+
+      .checkIcon {
+        @apply w-5 h-5;
+      }
+
+      .text {
+        @apply text-label font-normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.footer {
+  @apply pt-[1.625rem] pb-2 bg-white;
+
+  .innerContent {
+    @apply grid grid-cols-1 justify-items-center;
+
+    .bottomBorder {
+      @apply rounded-[6.25rem] w-[135px] h-[5px] bg-secondary mt-[1.625rem];
+    }
+  }
+}

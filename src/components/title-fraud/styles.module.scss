@@ -1,0 +1,22 @@
+.title-fraud {
+  background: linear-gradient(165.13deg, rgba(255, 255, 255, 0) 51.14%, #FFFFFF 85.23%);
+  background-image: url('/fraud-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .inner {
+    @apply w-[730px] flex flex-col justify-center items-center
+  }
+
+  .line {
+    @apply w-[111px] rounded-full h-1 mb-6 bg-[#EAEEEF] sm:left-[unset] sm:mx-auto mt-[20px];
+  }
+
+  .button {
+    box-shadow: 0px 4px 24px rgba(11, 174, 185, 0.12);
+
+    @apply mt-[24px] bg-primary px-[53px] h-[65px] flex justify-center items-center text-white text-subtitle1 rounded-[55px]
+  }
+
+  @apply w-full h-[785px] flex justify-center items-center
+}

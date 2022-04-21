@@ -10,7 +10,7 @@
       .nav-item {
         @apply h-full flex items-center text-center text-white/80 text-[15px];
 
-        &.active {
+        &:hover, &.active {
           @apply border-b-2 border-white text-white;
         }
       }
@@ -44,7 +44,7 @@
     .nav > .nav-item {
       @apply text-secondary/80;
 
-      &.active {
+      &:hover, &.active {
         @apply border-primary text-secondary;
       }
     }
