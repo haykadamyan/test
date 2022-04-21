@@ -9,7 +9,7 @@ function PhoneStepper(props) {
                 <span className="text-primary">Protect</span> Your Property
             </div>
             <div className={styles.line}></div>
-            <div className="text-subtitle1 text-gray-100 text-center font-normal xl:max-w-[620px]">
+            <div className="text-subtitle1 text-gray-100 text-center font-normal xl:max-w-[620px] lg:w-[560px]">
                 Title Guardian will protect your property from fraud and identy theft. Our smart technology will identify all activity on your property and alert you immediately
             </div>
             <div className={styles.inner}>

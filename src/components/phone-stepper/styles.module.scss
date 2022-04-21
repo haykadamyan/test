@@ -11,7 +11,11 @@
             @apply text-primary text-[45px] text-center
         }
 
-        @apply xl:w-[1108px] xl:h-[850px] xl:bg-[url('/phone-stepper-lines.png')] bg-no-repeat flex mt-[60px] justify-around
+        & > div {
+            @apply sm:mb-[50px]
+        }
+
+        @apply xl:w-[1108px] xl:h-[850px] xl:bg-[url('/phone-stepper-lines.png')] bg-no-repeat flex mt-[60px] justify-around lg:bg-[url('/phone-stepper.png')] lg:bg-[length:210px_420px] h-[650px] lg:px-8 sm:flex-col sm:w-[388px] sm:pt-[420px] sm:h-[1452px]
 
     }
 
@@ -19,5 +23,5 @@
         @apply w-[111px] rounded-full h-1 mb-6 bg-[#EAEEEF] sm:left-[unset] sm:mx-auto;
     }
 
-    @apply w-full h-[1308px] bg-[#F4F8F9] flex flex-col justify-center items-center
+    @apply w-full h-[1308px] bg-[#F4F8F9] flex flex-col justify-center items-center sm:pt-[150px] sm:pb-[150px] sm:h-[1452px]
 }
