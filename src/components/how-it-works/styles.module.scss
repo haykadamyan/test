@@ -3,7 +3,7 @@
   .inner {
 
     .wrapper {
-      @apply w-full flex justify-between items-center absolute z-10 px-[40px]
+      @apply w-full flex justify-between items-center absolute z-10 px-[40px] md:flex-col
     }
 
     .video {
@@ -15,7 +15,7 @@
         @apply absolute
       }
 
-      @apply relative
+      @apply relative md:mt-[-180px] md:mb-[30px]
     }
 
     .content {
@@ -24,7 +24,7 @@
         @apply w-[111px] rounded-full h-1 mb-6 bg-[#EAEEEF] sm:left-[unset] sm:mx-auto mt-[20px];
       }
 
-      @apply w-[477px]
+      @apply w-[477px] md:flex md:flex-col md:items-center xs:w-[297px]
     }
 
     .background {
@@ -32,11 +32,11 @@
       box-shadow: 0px 24px 35px rgba(17, 173, 181, 0.12);
       border-radius: 12px;
 
-      @apply w-[1013px] h-[517px] absolute z-0 right-0
+      @apply w-[1013px] h-[517px] absolute z-0 right-0 md:w-[690px] md:right-[calc(50%-345px)] sm:w-[512px] sm:right-[calc(50%-256px)] xs:w-[358px] xs:right-[calc(50%-179px)]
     }
 
     @apply w-[1178px] h-[517px] relative flex items-center
   }
 
-  @apply w-full flex justify-center items-center mb-[100px] mt-[16px]
+  @apply w-full flex justify-center items-center mb-[100px] mt-[16px] md:mt-[100px]
 }

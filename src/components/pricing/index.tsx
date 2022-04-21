@@ -1,8 +1,10 @@
 import React, { memo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {Autoplay} from "swiper";
 import { CheckIcon } from '@heroicons/react/outline';
 
 import 'swiper/css';
+import 'swiper/css/autoplay';
 
 const pricing = {
   tiers: [
@@ -67,7 +69,7 @@ function Pricing() {
           </div>
         </div>
 
-        <div className="mt-12 space-y-12 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-x-8 xs:hidden">
+        <div className="mt-12 space-y-0 grid grid-cols-3 gap-x-8 sm:hidden">
           {pricing.tiers.map((tier) => (
             <div
               key={tier.title}
@@ -115,8 +117,66 @@ function Pricing() {
             </div>
           ))}
         </div>
-        <div className="sm:hidden md:hidden lg:hidden xl:hidden xs:block text-center">
-          hello
+        <div className=" md:hidden lg:hidden xl:hidden sm:block text-center mt-[40px]">
+          <Swiper
+              spaceBetween={50}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              loop
+              slidesPerView={1}
+              modules={[Autoplay]}
+          >
+            {pricing.tiers.map((tier) => (
+                <SwiperSlide key={tier.title}>
+                  <div
+                      className="relative bg-white border border-blue-50 rounded-2xl shadow-sm flex flex-col"
+                  >
+                    <div className="flex-1">
+                      {tier.mostPopular && (
+                          <p className="absolute top-[20px] right-6 py-1.5 px-4 bg-primary rounded-full text-xs font-semibold uppercase tracking-wide text-white transform -translate-y-1/2">
+                            popular
+                          </p>
+                      )}
+
+                      <div className="bg-blue-50 p-8 rounded-t-2xl text-center">
+                        <h3 className="text-price text-primary font-medium">
+                          ${tier.price}
+                        </h3>
+                        <p className="text-secondary text-price-label mt-2">
+                          {tier.title} Plan
+                        </p>
+                        <p className="mt-2 text-gray-50 text-body2">{tier.description}</p>
+                      </div>
+
+                      <ul role="list" className="px-6 my-8 space-y-4">
+                        {tier.features.map((feature) => (
+                            <li key={feature} className="flex">
+                              <CheckIcon className="flex-shrink-0 w-6 h-6 text-primary" aria-hidden="true" />
+                              <span className="ml-3 text-gray-200">{feature}</span>
+                            </li>
+                        ))}
+                      </ul>
+                      <div className="px-6 pb-8">
+                        <a
+                            href="#"
+                            className={classNames(
+                                tier.mostPopular
+                                    ? 'bg-primary text-white hover:border-2 hover:border-primary hover:text-black hover:bg-white'
+                                    : 'border-2 border-primary text-secondary',
+                                'block w-full py-3 px-6 border rounded-md text-center font-medium hover:bg-primary hover:text-white transition'
+                            )}
+                        >
+                          {tier.cta}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
